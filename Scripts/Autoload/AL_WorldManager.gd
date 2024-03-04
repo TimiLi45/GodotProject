@@ -10,6 +10,7 @@ var levelSize : Vector2i = Vector2i(100,100)
 
 var newLevel
 
+var itemsInLevel : Array
 
 func _ready():
 	print("WorldManager     ------------------------ READY")
