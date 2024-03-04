@@ -10,7 +10,7 @@ var levelSize : Vector2i = Vector2i(100,100)
 
 var newLevel
 
-var itemsInLevel : Array = [["box1",1,1,1],["box1",1,0,1]]
+var itemsInLevel : Array = [["box1",1,1,1],["box1",0,1,3]]
 
 func _ready():
 	print("WorldManager     ------------------------ READY")
@@ -21,7 +21,6 @@ func switch_level(_path : String):
 	AlGameData.playerPawn.add_child(newUI)
 
 
-
 func new_level():
 	for i in get_tree().get_root().get_node("Main").get_children():
 		if i != null:
@@ -30,9 +29,6 @@ func new_level():
 	AlGameData.settlementManagementController = null
 	AlGameData.settlementManagementUI = null
 	get_tree().change_scene_to_file(newLevel)
-
-
-
 
 #### ---------------------- Cell Blocking --------------------------------------
 

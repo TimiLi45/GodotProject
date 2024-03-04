@@ -71,7 +71,7 @@ func _input(_event):
 		AlGameData.playerPawn = null
 	if Input.is_action_just_released("INVENTORY"):
 		ui_open()
-		var  newUI = load("res://UserInterface/Player/Inventory/UI_PLayer_Inventory.tscn").instantiate()
+		var  newUI = load("res://UserInterface/Player/Inventory/UI_Player_Inventory.tscn").instantiate()
 		self.add_child(newUI)
 	if Input.is_action_just_pressed("CLICK_LEFT"):
 		attack_melle()

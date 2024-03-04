@@ -26,7 +26,10 @@ func get_data(_id : int , _typ : int ,_amount : int,_mothernode):
 	match _typ:
 		0:
 			b_select.text = AlPlayerInventory.WEAPONS[_id]["weaponName"]
+		1:
+			b_select.text = AlPlayerInventory.RESOURCES[_id]["resourceName"]
 	b_select.text = b_select.text +"["+str(_amount)+"]"
+
 
 func new_node_clickt():
 	b_equip.visible   = false

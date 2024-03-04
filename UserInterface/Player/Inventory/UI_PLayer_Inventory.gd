@@ -1,23 +1,17 @@
 extends CanvasLayer
 
 @onready var item_list = $SC/GridContainer
-@onready var b_close = $B_Close
+@onready var b_close = $HBoxContainer/B_Close
+@onready var b_weapons = $HBoxContainer/B_Weapons
 @onready var l_text = $L_Text
-
-
 
 var showItemTyps : int = 0
 var itemsCreatet : Array
 
-
 func _ready():
-	match showItemTyps:
-		0: 
-			var id : int = 0
-			for amount in AlPlayerInventory.iWeapons:
-				if amount != 0:
-					create_iten(id,showItemTyps,amount)
-				id += 1
+	show_items()
+	showItemTyps = 1
+	show_items()
 	equipt()
 
 func create_iten(_id : int , _typ : int ,_amount : int):
@@ -40,3 +34,18 @@ func set_description_text(_text :String ):
 func _on_b_close_pressed():
 	self.queue_free()
 	AlGameData.playerPawn.ui_close()
+
+func show_items():
+	match showItemTyps:
+		0: 
+			var id : int = 0
+			for amount in AlPlayerInventory.iWeapons:
+				if amount != 0:
+					create_iten(id,showItemTyps,amount)
+				id += 1
+		1:
+			var id : int = 0
+			for amount in AlPlayerInventory.iRessources:
+				if amount != 0:
+					create_iten(id,showItemTyps,amount)
+				id += 1

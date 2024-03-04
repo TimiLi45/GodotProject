@@ -6,8 +6,9 @@
 script = ExtResource("1_715x5")
 
 [node name="SC" type="ScrollContainer" parent="."]
+offset_top = 40.0
 offset_right = 768.0
-offset_bottom = 440.0
+offset_bottom = 776.0
 
 [node name="GridContainer" type="GridContainer" parent="SC"]
 layout_mode = 2
@@ -23,17 +24,28 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.34902, 0.34902, 0.34902, 1)
 
-[node name="B_Close" type="Button" parent="."]
-offset_left = 776.0
-offset_right = 856.0
-offset_bottom = 31.0
-text = "Close"
-
 [node name="L_Text" type="Label" parent="."]
-offset_left = 776.0
-offset_top = 40.0
-offset_right = 1152.0
-offset_bottom = 384.0
+offset_left = 768.0
+offset_top = 192.0
+offset_right = 1144.0
+offset_bottom = 536.0
 text = "uizui"
 
-[connection signal="pressed" from="B_Close" to="." method="_on_b_close_pressed"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="B_Close" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Close"
+
+[node name="B_Weapons" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Weapons"
+
+[node name="B_Resources" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Ressources
+"
+
+[connection signal="pressed" from="HBoxContainer/B_Close" to="." method="_on_b_close_pressed"]
