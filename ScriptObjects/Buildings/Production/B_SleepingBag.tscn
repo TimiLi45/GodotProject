@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d4juii0civi58"]
 
-[ext_resource type="Script" path="res://Buildings/Production/B_SleepingBag.gd" id="1_eki73"]
+[ext_resource type="Script" path="res://ScriptObjects/Buildings/Production/B_SleepingBag.gd" id="1_eki73"]
 [ext_resource type="Texture2D" uid="uid://c50uq3wj0ujal" path="res://Assets_Sprites/Buildings/Production/SleepingBack.png" id="1_ol8om"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s860j"]

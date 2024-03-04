@@ -88,6 +88,7 @@ script = ExtResource("1_8eb2m")
 position = Vector2(0, -9.53674e-07)
 scale = Vector2(0.336368, -0.171214)
 shape = SubResource("CapsuleShape2D_fmxek")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)

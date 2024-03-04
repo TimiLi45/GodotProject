@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dkqpa2bbrluy2"]
 
-[ext_resource type="Script" path="res://Buildings/MISC/B_BunkerEntrance.gd" id="1_h8cs8"]
+[ext_resource type="Script" path="res://ScriptObjects/Buildings/MISC/B_BunkerEntrance.gd" id="1_h8cs8"]
 [ext_resource type="Texture2D" uid="uid://84vab0ioenn0" path="res://Assets_Sprites/Buildings/MISC/Bunker_entrance.png" id="1_m7vvb"]
-[ext_resource type="PackedScene" uid="uid://d0l1pkbaketnv" path="res://Buildings/MISC/B_LevelSwitch.tscn" id="3_6tv6l"]
+[ext_resource type="PackedScene" uid="uid://d0l1pkbaketnv" path="res://ScriptObjects/Buildings/MISC/B_LevelSwitch.tscn" id="3_6tv6l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7w63d"]
 size = Vector2(192, 132.375)

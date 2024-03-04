@@ -1,7 +1,7 @@
 extends Node
 
-## Typ == 0
-var iWeapons    : Array[int] = [0,0,0,0,0,0]
+
+var iWeapons    : Array[int] = [0,0,0,0,0,0] ## Typ == 0
 var iUsable     : Array[int]  ## Typ == 1
 var iQuest      : Array[int]  ## Typ == 2
 var iRessources : Array[int]  ## Typ == 3
@@ -21,6 +21,15 @@ const WEAPONS : Dictionary = {
 		weapon_exp_type=1,
 	},
 	}
+const RESOURCES: Dictionary = {
+	0:{
+		resourceName="Iron Plate",
+		description="A plate made out of Iron",
+	},
+	1:{
+		resourceName="Iron Rod",
+		description="A rod made out of Iron",
+	} }
 
 
 func _ready():

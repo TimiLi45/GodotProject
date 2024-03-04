@@ -10,7 +10,7 @@ var levelSize : Vector2i = Vector2i(100,100)
 
 var newLevel
 
-var itemsInLevel : Array
+var itemsInLevel : Array = [["box1",1,1,1],["box1",1,0,1]]
 
 func _ready():
 	print("WorldManager     ------------------------ READY")
@@ -59,9 +59,21 @@ func unblock_cell(cellID):
 
 #### ---------------------- Items in Level  --------------------------------------
 
-func add_item_in_level(_item : Array):
-	pass
+func add_item_in_level(_objectID : String,_id : int , _typ : int ,_amount : int):
+	itemsInLevel.append_array([_objectID,_id,_typ,_amount])
 
+func remove_item_in_level(_objectID : String,_id : int , _typ : int ,_amount : int):
+	for i in itemsInLevel:
+		if i[0] == _objectID and i[1] == _id and i[2] == _typ:
+			i[3] -= _amount
+			if 0 >= i[3] :
+				itemsInLevel.remove_at(itemsInLevel.find(i))
+
+func has_item_in_level(_objectID : String) -> bool:
+	for i in itemsInLevel:
+		if i[0] == _objectID:
+			return true
+	return false
 
 #### ---------------------- Time -----------------------------------------------
 

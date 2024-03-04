@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dg16nhxob78la"]
 
-[ext_resource type="Script" path="res://Buildings/Production/B_FarmSpot.gd" id="1_qegd8"]
+[ext_resource type="Script" path="res://ScriptObjects/Buildings/Production/B_FarmSpot.gd" id="1_qegd8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s860j"]
 

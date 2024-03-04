@@ -33,7 +33,7 @@ const buildings = {
 		sizeX=32,
 		sizeY=32,
 		spritePath="res://Assets_Sprites/Buildings/Production/Farming/Farm_Plot.png",
-		buildingpath="res://Buildings/Production/B_FarmSpot.tscn",
+		buildingpath="res://ScriptObjects/Buildings/Production/B_FarmSpot.tscn",
 		},
 	"KI":{
 		buildingName="Kitchen",
@@ -41,7 +41,7 @@ const buildings = {
 		sizeX=64,
 		sizeY=64,
 		spritePath="res://Assets_Sprites/Buildings/Production/Kitchen.png",
-		buildingpath="res://Buildings/Production/B_Kitchen.tscn",
+		buildingpath="res://ScriptObjects/Buildings/Production/B_Kitchen.tscn",
 		},
 	"SB":{
 		buildingName="Sleepingbag",
@@ -49,7 +49,7 @@ const buildings = {
 		sizeX=64,
 		sizeY=32,
 		spritePath="res://Assets_Sprites/Buildings/Production/SleepingBack.png",
-		buildingpath="res://Buildings/Production/B_SleepingBag.tscn",
+		buildingpath="res://ScriptObjects/Buildings/Production/B_SleepingBag.tscn",
 		},
 	"SS":{
 		buildingName="Scraping Station",
@@ -57,7 +57,7 @@ const buildings = {
 		sizeX=64,
 		sizeY=64,
 		spritePath="res://Assets_Sprites/Buildings/Production/ScrapStation.png",
-		buildingpath="res://Buildings/Production/B_ScrapinStation.tscn",
+		buildingpath="res://ScriptObjects/Buildings/Production/B_ScrapinStation.tscn",
 		},
 }
 

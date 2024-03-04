@@ -50,6 +50,7 @@ func _physics_process(delta):
 		if walking == false:
 			animation_player.play("idle")
 		move_and_slide()
+		
 	else:
 		if blockInput:
 			pass

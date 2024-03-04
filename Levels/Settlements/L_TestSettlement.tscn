@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dk5rb33cli1pa"]
+[gd_scene load_steps=5 format=3 uid="uid://dk5rb33cli1pa"]
 
 [ext_resource type="Script" path="res://Levels/Settlements/LS_TestLevel.gd" id="1_n0xeu"]
 [ext_resource type="PackedScene" uid="uid://b1o4y5r5y3ugo" path="res://Player/Player_Pawn.tscn" id="2_jaf70"]
-[ext_resource type="PackedScene" uid="uid://dkqpa2bbrluy2" path="res://Buildings/MISC/B_BunkerEntrance.tscn" id="3_iwvpc"]
+[ext_resource type="PackedScene" uid="uid://dkqpa2bbrluy2" path="res://ScriptObjects/Buildings/MISC/B_BunkerEntrance.tscn" id="3_iwvpc"]
+[ext_resource type="PackedScene" uid="uid://0ha5x37j58dn" path="res://ScriptObjects/Box.tscn" id="4_6l1ia"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_n0xeu")
@@ -13,9 +14,22 @@ polygon = PackedVector2Array(0, 0, 0, 1464, -880, 1464, -864, -1144, 2160, -1168
 
 [node name="Settlement" type="Node" parent="."]
 
-[node name="PlayerPawn" parent="." instance=ExtResource("2_jaf70")]
-position = Vector2(288, 224)
-
 [node name="BBunkerEntrance" parent="." instance=ExtResource("3_iwvpc")]
 z_index = -1
 position = Vector2(1024, 512)
+
+[node name="Node2D" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="PlayerPawn" parent="Node2D" instance=ExtResource("2_jaf70")]
+y_sort_enabled = true
+position = Vector2(288, 224)
+
+[node name="Chest" parent="Node2D" instance=ExtResource("4_6l1ia")]
+y_sort_enabled = true
+position = Vector2(384, 216)
+boxID = "box1"
+dismantle = false
+boxOffset = 18
+boxPath2 = "res://Assets_Sprites/Objects/Vault/Box_Vault_2.png"
+boxPath3 = "res://Assets_Sprites/Objects/Vault/Box_Vault_1.png"

@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://0ha5x37j58dn"]
+
+[ext_resource type="Script" path="res://ScriptObjects/SO_Box.gd" id="1_wbygg"]
+[ext_resource type="Texture2D" uid="uid://7juhix1slycx" path="res://Assets_Sprites/Objects/Vault/Box_Vault_1.png" id="2_rasou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ok0i"]
+size = Vector2(52, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxf1d"]
+size = Vector2(32, 25)
+
+[node name="Chest" type="Node2D"]
+z_as_relative = false
+script = ExtResource("1_wbygg")
+boxPath1 = "res://Assets_Sprites/Objects/Vault/Box_Vault_1.png"
+
+[node name="Node2D" type="Node2D" parent="."]
+z_as_relative = false
+
+[node name="S_Box1" type="Sprite2D" parent="Node2D"]
+position = Vector2(0, 14)
+texture = ExtResource("2_rasou")
+
+[node name="S_Box2" type="Sprite2D" parent="Node2D"]
+position = Vector2(0, 14)
+
+[node name="S_Box3" type="Sprite2D" parent="Node2D"]
+position = Vector2(0, 14)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 38)
+shape = SubResource("RectangleShape2D_8ok0i")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(0, -9)
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(0, 25.5)
+shape = SubResource("RectangleShape2D_gxf1d")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 1
+offset_left = -31.0
+offset_top = -40.0
+offset_right = 31.0
+offset_bottom = -17.0
+text = "Loot \"E\""
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="." method="_on_area_2d_body_exited"]
