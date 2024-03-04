@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkqpa2bbrluy2"]
+
+[ext_resource type="Script" path="res://Buildings/MISC/B_BunkerEntrance.gd" id="1_h8cs8"]
+[ext_resource type="Texture2D" uid="uid://84vab0ioenn0" path="res://Assets_Sprites/Buildings/MISC/Bunker_entrance.png" id="1_m7vvb"]
+[ext_resource type="PackedScene" uid="uid://d0l1pkbaketnv" path="res://Buildings/MISC/B_LevelSwitch.tscn" id="3_6tv6l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7w63d"]
+size = Vector2(192, 132.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_536vl"]
+size = Vector2(336, 312)
+
+[node name="BBunkerEntrance" type="Node2D"]
+script = ExtResource("1_h8cs8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m7vvb")
+
+[node name="Area2D" type="Area2D" parent="."]
+disable_mode = 1
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(16, 154.188)
+shape = SubResource("RectangleShape2D_7w63d")
+
+[node name="Area2D2" type="Area2D" parent="."]
+disable_mode = 1
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(16, -68)
+shape = SubResource("RectangleShape2D_536vl")
+
+[node name="BLevelSwitch" parent="." instance=ExtResource("3_6tv6l")]
+position = Vector2(16, -46)
+levleName = "res://Levels/Vault/L_Vault1.tscn"

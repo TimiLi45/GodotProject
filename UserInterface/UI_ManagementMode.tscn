@@ -1,0 +1,90 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj0k31qhyf0hv"]
+
+[ext_resource type="Script" path="res://UserInterface/UI_ManagementMode.gd" id="1_dkpa0"]
+
+[node name="UiManagementMode" type="CanvasLayer"]
+script = ExtResource("1_dkpa0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="B_Return" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Return
+"
+
+[node name="B_Back" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="B_BuildMode" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Build"
+
+[node name="B_NPCs" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "NPCs"
+
+[node name="B_DayOver" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Day Over"
+
+[node name="B_HourOver" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Hour Over"
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="SBC" type="ScrollContainer" parent="."]
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 308.0
+offset_bottom = 1048.0
+horizontal_scroll_mode = 0
+
+[node name="VBC_Selection" type="VBoxContainer" parent="SBC"]
+layout_mode = 2
+
+[node name="Info_UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 320.0
+offset_top = 48.0
+offset_right = 320.0
+offset_bottom = 48.0
+
+[node name="HBC_Ressources" type="HBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="L_R_Corn" type="Label" parent="HBC_Ressources"]
+layout_mode = 2
+text = "Corn: "
+
+[node name="L_R_Wood" type="Label" parent="HBC_Ressources"]
+layout_mode = 2
+text = "Corn: "
+
+[node name="L_R_Meal[0]" type="Label" parent="HBC_Ressources"]
+layout_mode = 2
+text = "Corn: "
+
+[node name="L_R_ClearWater" type="Label" parent="HBC_Ressources"]
+layout_mode = 2
+text = "Corn: "
+
+[connection signal="pressed" from="HBoxContainer/B_Return" to="." method="_on_b_return_pressed"]
+[connection signal="pressed" from="HBoxContainer/B_Back" to="." method="_on_b_back_pressed"]
+[connection signal="pressed" from="HBoxContainer/B_BuildMode" to="." method="_on_b_build_mode_pressed"]
+[connection signal="pressed" from="HBoxContainer/B_NPCs" to="." method="_on_b_np_cs_pressed"]
+[connection signal="pressed" from="HBoxContainer/B_DayOver" to="." method="_on_b_day_over_pressed"]
+[connection signal="pressed" from="HBoxContainer/B_HourOver" to="." method="_on_b_hour_over_pressed"]

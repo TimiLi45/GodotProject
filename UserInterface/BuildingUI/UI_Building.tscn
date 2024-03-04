@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjpke7d1ctnti"]
+
+[ext_resource type="Script" path="res://UserInterface/BuildingUI/UI_Building.gd" id="1_o1f78"]
+[ext_resource type="Texture2D" uid="uid://bl1jyah0v2m04" path="res://Assets_Sprites/icon.svg" id="1_w5yjx"]
+
+[node name="UiBuilding" type="Control"]
+custom_minimum_size = Vector2(120, 150)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1032.0
+offset_bottom = -498.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o1f78")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(60, 60)
+texture = ExtResource("1_w5yjx")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_top = 119.0
+offset_right = 120.0
+offset_bottom = 150.0
+text = "Buling Name"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

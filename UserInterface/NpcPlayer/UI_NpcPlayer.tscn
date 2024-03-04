@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://gfickdt7mx6i"]
+
+[ext_resource type="Script" path="res://UserInterface/NpcPlayer/UI_NpcPlayer.gd" id="1_uaqk7"]
+[ext_resource type="Texture2D" uid="uid://bl1jyah0v2m04" path="res://Assets_Sprites/icon.svg" id="2_n76ft"]
+
+[node name="UiNPcPlayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uaqk7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="L_Name" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Name "
+
+[node name="HBC_Job" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="L_Job" type="Label" parent="VBoxContainer/HBC_Job"]
+layout_mode = 2
+text = "Works: "
+
+[node name="B_SelectJob" type="Button" parent="VBoxContainer/HBC_Job"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Select Job"
+
+[node name="HBC_SleepingSpot" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="L_SleepingSpot" type="Label" parent="VBoxContainer/HBC_SleepingSpot"]
+layout_mode = 2
+text = "Sleeps: "
+
+[node name="B_SelectSleepinSpot" type="Button" parent="VBoxContainer/HBC_SleepingSpot"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Select s. Spot"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(384, 66)
+texture = ExtResource("2_n76ft")
+
+[node name="SC" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_top = 192.0
+offset_right = 448.0
+offset_bottom = 384.0
+
+[node name="VC_Selection" type="VBoxContainer" parent="SC"]
+layout_mode = 2
+
+[node name="P_Background" type="Polygon2D" parent="."]
+z_index = -1
+color = Color(0.380392, 0.360784, 0.321569, 0.752941)
+polygon = PackedVector2Array(0, 0, 0, 384, 448, 384, 448, 0)
+
+[connection signal="pressed" from="VBoxContainer/HBC_Job/B_SelectJob" to="." method="_on_b_select_job_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBC_SleepingSpot/B_SelectSleepinSpot" to="." method="_on_b_select_sleepin_spot_pressed"]

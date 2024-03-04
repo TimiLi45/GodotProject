@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://je3e3k13lmcs"]
+
+[ext_resource type="Script" path="res://UserInterface/NpcPlayer/UI_Button_Npc_Player.gd" id="1_frfs2"]
+
+[node name="UiButtonNpcPlayer" type="Control"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -852.0
+offset_bottom = -608.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_frfs2")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 40.0
+text = "Text"
+alignment = 0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

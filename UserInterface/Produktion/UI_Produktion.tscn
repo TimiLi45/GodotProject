@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2s0c0u1i2en"]
+
+[ext_resource type="Script" path="res://UserInterface/Produktion/UI_Produktion.gd" id="1_5f0qy"]
+
+[node name="UiProduktion" type="CanvasLayer"]
+script = ExtResource("1_5f0qy")
+
+[node name="L_Name" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Name of Workstation"
+
+[node name="SC" type="ScrollContainer" parent="."]
+offset_left = -1.0
+offset_top = 30.0
+offset_right = 324.0
+offset_bottom = 768.0
+
+[node name="VBC" type="VBoxContainer" parent="SC"]
+layout_mode = 2
+
+[node name="B_Back" type="Button" parent="."]
+offset_left = 261.0
+offset_top = -2.0
+offset_right = 331.0
+offset_bottom = 29.0
+text = "Back"
+
+[connection signal="pressed" from="B_Back" to="." method="_on_b_back_pressed"]

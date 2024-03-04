@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://d228tffg4mtwe"]
+
+[ext_resource type="Script" path="res://Player/SettlementManagementController.gd" id="1_2qbol"]
+[ext_resource type="PackedScene" uid="uid://c8vyxy2p0ahcg" path="res://Player/SMC_MouseFollower.tscn" id="2_peioq"]
+[ext_resource type="PackedScene" uid="uid://dj0k31qhyf0hv" path="res://UserInterface/UI_ManagementMode.tscn" id="3_2fjsl"]
+
+[node name="PlayerController" type="Node2D"]
+script = ExtResource("1_2qbol")
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="PlayerMouseFollower" parent="." instance=ExtResource("2_peioq")]
+
+[node name="UiManagementMode" parent="." instance=ExtResource("3_2fjsl")]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk5rb33cli1pa"]
+
+[ext_resource type="Script" path="res://Levels/Settlements/LS_TestLevel.gd" id="1_n0xeu"]
+[ext_resource type="PackedScene" uid="uid://b1o4y5r5y3ugo" path="res://Player/Player_Pawn.tscn" id="2_jaf70"]
+[ext_resource type="PackedScene" uid="uid://dkqpa2bbrluy2" path="res://Buildings/MISC/B_BunkerEntrance.tscn" id="3_iwvpc"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_n0xeu")
+
+[node name="Level_Rand" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 0, 1464, -880, 1464, -864, -1144, 2160, -1168, 2176, 0)
+
+[node name="Settlement" type="Node" parent="."]
+
+[node name="PlayerPawn" parent="." instance=ExtResource("2_jaf70")]
+position = Vector2(288, 224)
+
+[node name="BBunkerEntrance" parent="." instance=ExtResource("3_iwvpc")]
+z_index = -1
+position = Vector2(1024, 512)

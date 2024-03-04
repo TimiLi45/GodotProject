@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6almsj7poh6p"]
+
+[ext_resource type="Script" path="res://UserInterface/BuildingUI/UI_Building_Mode.gd" id="1_71jj1"]
+
+[node name="UIBuildingMode" type="CanvasLayer"]
+script = ExtResource("1_71jj1")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_right = 800.0
+offset_bottom = 625.0
+horizontal_scroll_mode = 0
+
+[node name="GC_Building" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 5
+
+[node name="B_Back" type="Button" parent="."]
+offset_left = 499.0
+offset_right = 544.0
+offset_bottom = 31.0
+text = "Back"
+
+[node name="B_Delete" type="Button" parent="."]
+offset_left = 555.0
+offset_top = -1.0
+offset_right = 614.0
+offset_bottom = 30.0
+text = "Delete"
+
+[node name="L_BuildingInfo" type="Label" parent="."]
+offset_left = 506.0
+offset_top = 55.0
+offset_right = 795.0
+offset_bottom = 230.0
+autowrap_mode = 3
+
+[connection signal="pressed" from="B_Back" to="." method="_on_b_back_pressed"]
+[connection signal="pressed" from="B_Delete" to="." method="_on_b_delete_pressed"]

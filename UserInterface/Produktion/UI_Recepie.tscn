@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6u8clhcxvk63"]
+
+[ext_resource type="Script" path="res://UserInterface/Produktion/UI_Recepie.gd" id="1_1kis7"]
+
+[node name="UiRecepie" type="Control"]
+custom_minimum_size = Vector2(320, 64)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -880.0
+offset_bottom = -736.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1kis7")
+
+[node name="L_Name" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Recepie name "
+
+[node name="B_SetActive" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Active"
+
+[node name="P_BAckground" type="Polygon2D" parent="."]
+z_index = -1
+color = Color(0.537255, 0.333333, 0.176471, 0.698039)
+polygon = PackedVector2Array(0, 0, 0, 64, 320, 64, 320, 0)
+
+[node name="L_Text" type="Label" parent="."]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 113.0
+offset_bottom = 47.0
+text = "Text name "
+
+[connection signal="pressed" from="B_SetActive" to="." method="_on_b_set_active_pressed"]
