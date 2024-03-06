@@ -40,8 +40,10 @@ func _ready():
 func create_skills():
 	var newSkill  = Skill.new("Bruiser",Skill_Typ.combat,1)
 	var newSkill2 = Skill.new("Butcher",Skill_Typ.combat,1)
+	var newSkill3 = Skill.new("Scavenger",Skill_Typ.ressources,1)
 	skills.append(newSkill)
 	skills.append(newSkill2)
+	skills.append(newSkill3)
 
 func add_exp(_skill_ap: int,_amount : int):
 	skills[_skill_ap].exp_current += _amount
@@ -63,3 +65,4 @@ func skill_check(_skill_ap : int, _needet_level : int) -> bool:
 		return true
 	else:
 		return false
+

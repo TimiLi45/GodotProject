@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://7juhix1slycx" path="res://Assets_Sprites/Objects/Vault/Box_Vault_1.png" id="2_rasou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ok0i"]
-size = Vector2(52, 20)
+size = Vector2(37.5, 19)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxf1d"]
-size = Vector2(32, 25)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7h7m2"]
+size = Vector2(28, 20)
 
 [node name="Chest" type="Node2D"]
 z_as_relative = false
@@ -31,7 +31,7 @@ position = Vector2(0, 14)
 position = Vector2(0, -9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 38)
+position = Vector2(0, 40)
 shape = SubResource("RectangleShape2D_8ok0i")
 
 [node name="Area2D2" type="Area2D" parent="."]
@@ -39,8 +39,8 @@ position = Vector2(0, -9)
 disable_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(0, 25.5)
-shape = SubResource("RectangleShape2D_gxf1d")
+position = Vector2(-1, 29)
+shape = SubResource("RectangleShape2D_7h7m2")
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -51,7 +51,15 @@ offset_right = 31.0
 offset_bottom = -17.0
 text = "Loot \"E\""
 
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+z_index = 1
+offset_left = -30.0
+offset_top = -34.0
+offset_right = 270.0
+offset_bottom = 26.0
+scale = Vector2(0.2, 0.2)
+value = 0.26
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D2" to="." method="_on_area_2d_body_exited"]

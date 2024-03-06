@@ -29,6 +29,7 @@ position = Vector2(288, 224)
 y_sort_enabled = true
 position = Vector2(384, 216)
 boxID = "box1"
+dismantle = true
 boxOffset = 18
 boxPath2 = "res://Assets_Sprites/Objects/Vault/Box_Vault_2.png"
 boxPath3 = "res://Assets_Sprites/Objects/Vault/Box_Vault_1.png"
