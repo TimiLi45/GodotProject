@@ -10,7 +10,8 @@ var levelSize : Vector2i = Vector2i(100,100)
 
 var newLevel
 
-var itemsInLevel : Array = [["box1",1,1,1],["box1",0,1,3]]
+var itemsInLevel : Array = [["box1",0,1,1],["box1",1,1,3],["box2",1,1,3]]
+var dismountableObjects :Array = []
 
 func _ready():
 	print("WorldManager     ------------------------ READY")
@@ -28,6 +29,7 @@ func new_level():
 	AlGameData.playerPawn = null
 	AlGameData.settlementManagementController = null
 	AlGameData.settlementManagementUI = null
+	AlPlayerFraction.currentSettlementAP = -1
 	get_tree().change_scene_to_file(newLevel)
 
 #### ---------------------- Cell Blocking --------------------------------------

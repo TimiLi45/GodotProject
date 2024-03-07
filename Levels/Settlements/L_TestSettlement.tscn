@@ -33,3 +33,11 @@ dismantle = true
 boxOffset = 18
 boxPath2 = "res://Assets_Sprites/Objects/Vault/Box_Vault_2.png"
 boxPath3 = "res://Assets_Sprites/Objects/Vault/Box_Vault_1.png"
+
+[node name="Chest2" parent="Node2D" instance=ExtResource("4_6l1ia")]
+y_sort_enabled = true
+position = Vector2(409, 216)
+boxID = "box2"
+dismantle = true
+boxOffset = 18
+boxPath2 = "res://Assets_Sprites/Objects/Vault/Box_Vault_2.png"

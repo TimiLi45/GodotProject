@@ -75,6 +75,10 @@ func _input(_event):
 		self.add_child(newUI)
 	if Input.is_action_just_pressed("CLICK_LEFT"):
 		attack_melle()
+	if Input.is_action_just_pressed("SKILLS"):
+		ui_open()
+		var  newUI = load("res://UserInterface/Player/Skills/UI_Skills.tscn").instantiate()
+		self.add_child(newUI)
 
 func ui_open():
 	uiOpen     = true

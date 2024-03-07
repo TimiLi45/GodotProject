@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://ufaf7ovpprdy"]
+
+[ext_resource type="Script" path="res://UserInterface/Player/Skills/UI_Skills.gd" id="1_b3nex"]
+
+[node name="UiSkills" type="CanvasLayer"]
+script = ExtResource("1_b3nex")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.568627, 0.54902, 0.529412, 0.211765)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(2, 2)
+text = " Skills"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(800, 800)
+offset_top = 48.0
+offset_right = 441.0
+offset_bottom = 88.0
+
+[node name="GC_Skills" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="B_Close" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+text = "Close"
+
+[connection signal="pressed" from="B_Close" to="." method="_on_b_close_pressed"]

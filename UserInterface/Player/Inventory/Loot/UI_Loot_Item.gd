@@ -15,7 +15,7 @@ func get_data(_objectID : String,_id : int , _typ : int ,_amount : int,_motherno
 	typ      = _typ
 	amount  = _amount
 	mothernode = _mothernode
-	match id:
+	match typ:
 		0:
 			itemName = AlPlayerInventory.WEAPONS[_id]["weaponName"]
 		1:

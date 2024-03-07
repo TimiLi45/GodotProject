@@ -19,12 +19,15 @@ var progres : bool = false
 var progressDone : float = 0
 
 func _ready():
-	#
+	if AlWorldManager.dismountableObjects.has(boxID):
+		self.queue_free()
 	boxSprite1.texture = load(boxPath1)
-	boxSprite2.texture = load(boxPath2)
-	boxSprite2.position.y  -= boxOffset
-	boxSprite3.texture = load(boxPath3)
-	boxSprite3.position.y  -= (boxOffset*2)
+	if boxPath2 != "":
+		boxSprite2.texture = load(boxPath2)
+		boxSprite2.position.y  -= boxOffset
+	if boxPath3 != "":
+		boxSprite3.texture = load(boxPath3)
+		boxSprite3.position.y  -= (boxOffset*2)
 
 func _on_area_2d_body_entered(body):
 	if body != AlGameData.playerPawn:
@@ -57,6 +60,7 @@ func _process(delta):
 		if progressDone >= 100:
 			AlGameData.playerPawn.ui_close()
 			add_items_to_player()
+			AlWorldManager.dismountableObjects.append(boxID)
 			self.queue_free()
 
 func add_items_to_player():
