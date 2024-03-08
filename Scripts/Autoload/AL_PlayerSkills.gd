@@ -34,8 +34,12 @@ const SKILL_DESCRIPTION = {
 	1:"All damage with sharp weapons",
 	}
 
+#### -------------- Godot Base Funktions ---------------------------------------
+
 func _ready():
 	create_skills()
+
+#### -------------- Skill Funktions ---------------------------------------
 
 func create_skills():
 	var newSkill  = Skill.new("Bruiser",Skill_Typ.combat,1)

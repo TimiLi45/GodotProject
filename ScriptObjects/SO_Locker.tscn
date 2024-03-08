@@ -1,45 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://0ha5x37j58dn"]
+[gd_scene load_steps=5 format=3 uid="uid://hfpi6rkdd03f"]
 
-[ext_resource type="Script" path="res://ScriptObjects/SO_Box.gd" id="1_wbygg"]
-[ext_resource type="Texture2D" uid="uid://7juhix1slycx" path="res://Assets_Sprites/Objects/Vault/Box_Vault_1.png" id="2_rasou"]
+[ext_resource type="Script" path="res://ScriptObjects/SO_Locker.gd" id="1_mllj1"]
+[ext_resource type="Texture2D" uid="uid://dy57nnu0upw3o" path="res://Assets_Sprites/Objects/Vault/Vault_Locker.png" id="2_3w7eq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ok0i"]
-size = Vector2(21, 17.5)
+size = Vector2(39, 15.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7h7m2"]
-size = Vector2(28, 20)
+size = Vector2(19, 19)
 
-[node name="Chest" type="Node2D"]
+[node name="Locker" type="Node2D"]
 z_as_relative = false
-script = ExtResource("1_wbygg")
-boxPath1 = "res://Assets_Sprites/Objects/Vault/Box_Vault_1.png"
+script = ExtResource("1_mllj1")
 
-[node name="Node2D" type="Node2D" parent="."]
-z_as_relative = false
-
-[node name="S_Box1" type="Sprite2D" parent="Node2D"]
-position = Vector2(0, 14)
-texture = ExtResource("2_rasou")
-
-[node name="S_Box2" type="Sprite2D" parent="Node2D"]
-position = Vector2(0, 14)
-
-[node name="S_Box3" type="Sprite2D" parent="Node2D"]
-position = Vector2(0, 14)
+[node name="S_Box1" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("2_3w7eq")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(0, -9)
+position = Vector2(0, -39)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1.5, 39.25)
+position = Vector2(0, 39)
 shape = SubResource("RectangleShape2D_8ok0i")
 
 [node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(0, -9)
+position = Vector2(0, -39)
 disable_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(-1, 29)
+position = Vector2(-0.5, 29.5)
 shape = SubResource("RectangleShape2D_7h7m2")
 
 [node name="Label" type="Label" parent="."]

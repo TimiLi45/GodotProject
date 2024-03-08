@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dk5rb33cli1pa"]
+[gd_scene load_steps=6 format=3 uid="uid://dk5rb33cli1pa"]
 
 [ext_resource type="Script" path="res://Levels/Settlements/LS_TestLevel.gd" id="1_n0xeu"]
 [ext_resource type="PackedScene" uid="uid://b1o4y5r5y3ugo" path="res://Player/Player_Pawn.tscn" id="2_jaf70"]
 [ext_resource type="PackedScene" uid="uid://dkqpa2bbrluy2" path="res://ScriptObjects/Buildings/MISC/B_BunkerEntrance.tscn" id="3_iwvpc"]
-[ext_resource type="PackedScene" uid="uid://0ha5x37j58dn" path="res://ScriptObjects/Box.tscn" id="4_6l1ia"]
+[ext_resource type="Texture2D" uid="uid://c65popt5hc84h" path="res://Assets_Sprites/Objects/Vault/Sign/Vault_Poster2.png" id="5_73xsw"]
+[ext_resource type="PackedScene" uid="uid://hfpi6rkdd03f" path="res://ScriptObjects/SO_Locker.tscn" id="6_p11t7"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_n0xeu")
@@ -25,19 +26,9 @@ y_sort_enabled = true
 y_sort_enabled = true
 position = Vector2(288, 224)
 
-[node name="Chest" parent="Node2D" instance=ExtResource("4_6l1ia")]
-y_sort_enabled = true
-position = Vector2(384, 216)
-boxID = "box1"
-dismantle = true
-boxOffset = 18
-boxPath2 = "res://Assets_Sprites/Objects/Vault/Box_Vault_2.png"
-boxPath3 = "res://Assets_Sprites/Objects/Vault/Box_Vault_1.png"
+[node name="VaultPoster2" type="Sprite2D" parent="."]
+position = Vector2(433, 229)
+texture = ExtResource("5_73xsw")
 
-[node name="Chest2" parent="Node2D" instance=ExtResource("4_6l1ia")]
-y_sort_enabled = true
-position = Vector2(409, 216)
-boxID = "box2"
-dismantle = true
-boxOffset = 18
-boxPath2 = "res://Assets_Sprites/Objects/Vault/Box_Vault_2.png"
+[node name="Chest" parent="." instance=ExtResource("6_p11t7")]
+position = Vector2(360, 216)

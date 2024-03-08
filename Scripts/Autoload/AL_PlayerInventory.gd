@@ -31,11 +31,14 @@ const RESOURCES: Dictionary = {
 		description="A rod made out of Iron",
 	} }
 
+#### -------------- Godot Base Funktions ---------------------------------------
 
 func _ready():
 	add_item(0,0,1)
 	add_item(1,0,2)
 	add_item(0,1,10)
+
+#### -------------- Invenory Funktions -----------------------------------------
 
 func has_player_item(_id : int, _typ : int ,_amount : int) -> bool:
 	match _typ:
@@ -68,6 +71,8 @@ func remove_item(_itemID: int , _itemTyp: int , _itemAmount: int ):
 			iWeapons[_itemID] -= _itemAmount
 		1:
 			iUsable[_itemID] -= _itemAmount
+
+#### -------------- Weapons Funktions ------------------------------------------
 
 func equip_weapon(_id : int):
 	weaponEquipt = _id

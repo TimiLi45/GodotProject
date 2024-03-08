@@ -2,14 +2,6 @@ extends Node2D
 
 @export var boxID     : String
 @export var dismantle : bool = false 
-@export var boxOffset : int 
-@export var boxPath1  : String
-@export var boxPath2  : String
-@export var boxPath3  : String
-
-@onready var boxSprite1 = $Node2D/S_Box1
-@onready var boxSprite2 = $Node2D/S_Box2
-@onready var boxSprite3 = $Node2D/S_Box3
 
 @onready var label = $Label
 @onready var progress_bar = $ProgressBar
@@ -20,14 +12,6 @@ var progressDone : float = 0
 func _ready():
 	if AlWorldManager.dismountableObjects.has(boxID):
 		self.queue_free()
-	print(boxPath1)
-	boxSprite1.texture = load(boxPath1)
-	if boxPath2 != "":
-		boxSprite2.texture = load(boxPath2)
-		boxSprite2.position.y  -= boxOffset
-	if boxPath3 != "":
-		boxSprite3.texture = load(boxPath3)
-		boxSprite3.position.y  -= (boxOffset*2)
 
 func _on_area_2d_body_entered(body):
 	if body != AlGameData.playerPawn:

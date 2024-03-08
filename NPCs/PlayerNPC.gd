@@ -71,7 +71,6 @@ func farming():
 	pathToTargetLocation = AlWorldManager.find_path(currentPosition, AlPlayerFraction.farmingSpots[faAP].building.position/32)
 	currentPathIndex = 0
 
-
 func idle():
 	animationMode = AnimationMode.idel
 
