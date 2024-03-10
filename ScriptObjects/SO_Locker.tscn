@@ -14,6 +14,7 @@ z_as_relative = false
 script = ExtResource("1_mllj1")
 
 [node name="S_Box1" type="Sprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(0, -32)
 texture = ExtResource("2_3w7eq")
 

@@ -26,9 +26,10 @@ y_sort_enabled = true
 y_sort_enabled = true
 position = Vector2(288, 224)
 
-[node name="VaultPoster2" type="Sprite2D" parent="."]
+[node name="Chest" parent="Node2D" instance=ExtResource("6_p11t7")]
+y_sort_enabled = true
+position = Vector2(360, 216)
+
+[node name="VaultPoster2" type="Sprite2D" parent="Node2D"]
 position = Vector2(433, 229)
 texture = ExtResource("5_73xsw")
-
-[node name="Chest" parent="." instance=ExtResource("6_p11t7")]
-position = Vector2(360, 216)

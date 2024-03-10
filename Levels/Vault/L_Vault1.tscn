@@ -54,6 +54,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_m0jlp")
 
 [node name="Main" type="Node2D"]
+y_sort_enabled = true
 
 [node name="VaultSpawnroom" type="Sprite2D" parent="."]
 position = Vector2(2048, 512)
@@ -219,27 +220,22 @@ rotation = -0.000258255
 texture = ExtResource("10_voqjc")
 
 [node name="Chest2" parent="." instance=ExtResource("12_762xb")]
-z_as_relative = true
 y_sort_enabled = true
 position = Vector2(1118, 166)
 
 [node name="Chest" parent="." instance=ExtResource("12_762xb")]
-z_as_relative = true
 y_sort_enabled = true
 position = Vector2(1138, 166)
 
 [node name="Chest3" parent="." instance=ExtResource("12_762xb")]
-z_as_relative = true
 y_sort_enabled = true
 position = Vector2(1078, 166)
 
 [node name="Chest4" parent="." instance=ExtResource("12_762xb")]
-z_as_relative = true
 y_sort_enabled = true
 position = Vector2(1098, 166)
 
 [node name="Chest5" parent="." instance=ExtResource("12_vhqj2")]
-z_as_relative = true
 y_sort_enabled = true
 position = Vector2(1050, 166)
 boxOffset = 18
