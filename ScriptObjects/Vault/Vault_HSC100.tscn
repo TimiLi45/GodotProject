@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4dbskgprxcr3"]
+
+[ext_resource type="Script" path="res://ScriptObjects/Vault/Vault_HSC100.gd" id="1_81thy"]
+[ext_resource type="Texture2D" uid="uid://dwm0453mj1oaw" path="res://Assets_Sprites/Objects/Vault/Vault_HSC100_Terminal.png" id="2_ll6ab"]
+[ext_resource type="Texture2D" uid="uid://1rme1pyqdwtu" path="res://Assets_Sprites/Objects/Vault/Vault_HSC100_Terminal_Screen.png" id="3_rr0ag"]
+
+[node name="VaultHsc100" type="Node2D"]
+script = ExtResource("1_81thy")
+
+[node name="S_Computer" type="Sprite2D" parent="."]
+texture = ExtResource("2_ll6ab")
+
+[node name="S_Screen" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("3_rr0ag")
+hframes = 8
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
